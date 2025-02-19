@@ -18,7 +18,7 @@ There are several global Digital Elevation Models (DEMs) available, such as SRTM
 If you run the code locally, you'll see many 3D visualizations in Jupyter, and temporary models can be viewed in MeshLab.
 
 # Running with OpenSfM
-1. Clone OpenSfM repo git@github.com:mapillary/OpenSfM.git
+1. Clone OpenSfM repo [git@github.com:mapillary/OpenSfM.git](https://github.com/mapillary/OpenSfM)
 2. Checkout to commit 1106198c79a0417fe59df68293c59ba7688533c0 (19 Feb 2025 latest commit had unworking docker)
 3. Build docker image with dockerfile from this repo
 4. Run container with mounts similar to this way:
@@ -32,3 +32,22 @@ opensfm-base*
 5. Run 'python3 setup.py build' inside OpenSfM folder
 6. Install Jupyter-lab
 7. Run notebook 'cone_pairing_opensfm.ipynb'
+
+### Test reconstruction './opensfm_pairing_draft/data/batumi_6pic'
+![Test images](docs/test_im_list.png)
+
+Pairing map:
+- DJI_0280.JPG ['DJI_0276.JPG', 'DJI_0290.JPG']
+- DJI_0263.JPG ['DJI_0262.JPG']
+- DJI_0276.JPG ['DJI_0280.JPG', 'DJI_0257.JPG', 'DJI_0290.JPG']
+- DJI_0257.JPG ['DJI_0276.JPG']
+- DJI_0290.JPG ['DJI_0280.JPG', 'DJI_0276.JPG']
+- DJI_0262.JPG ['DJI_0263.JPG']
+
+![Cones](docs/batumi_cones_viz.png)
+
+Point cloud:
+
+![Point cloud](docs/batumi_rec.png)
+
+Left images can't be reconstructed, becouse they captured from the same point. Right images reconstructs correctly.
