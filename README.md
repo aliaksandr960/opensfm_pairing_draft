@@ -17,7 +17,7 @@ There are several global Digital Elevation Models (DEMs) available, such as SRTM
 #### Code: 'cone_matcher.ipynb', test data: './data'.
 If you run the code locally, you'll see many 3D visualizations in Jupyter, and temporary models can be viewed in MeshLab.
 
-# Running with OpenSfM
+# Running with OpenSfM docker
 1. Clone OpenSfM repo [git@github.com:mapillary/OpenSfM.git](https://github.com/mapillary/OpenSfM)
 2. Checkout to commit 1106198c79a0417fe59df68293c59ba7688533c0 (19 Feb 2025 latest commit had unworking docker)
 3. Build docker image with dockerfile from this repo
